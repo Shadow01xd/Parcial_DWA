@@ -2,8 +2,39 @@
 document.addEventListener('DOMContentLoaded', function() {
     console.log('Header UNIVO cargado correctamente');
     
-    // Funcionalidad para los menús desplegables
+    // Mobile Menu Toggle
+    const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+    const nav = document.querySelector('.nav');
     const navItems = document.querySelectorAll('.nav-item');
+    
+    if (mobileMenuToggle && nav) {
+        mobileMenuToggle.addEventListener('click', function() {
+            mobileMenuToggle.classList.toggle('active');
+            nav.classList.toggle('active');
+            document.body.classList.toggle('menu-open');
+        });
+        
+        // Cerrar menú al hacer clic en un enlace
+        const navLinks = document.querySelectorAll('.nav-link');
+        navLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                mobileMenuToggle.classList.remove('active');
+                nav.classList.remove('active');
+                document.body.classList.remove('menu-open');
+            });
+        });
+        
+        // Cerrar menú al hacer clic fuera
+        document.addEventListener('click', function(e) {
+            if (!nav.contains(e.target) && !mobileMenuToggle.contains(e.target)) {
+                mobileMenuToggle.classList.remove('active');
+                nav.classList.remove('active');
+                document.body.classList.remove('menu-open');
+            }
+        });
+    }
+    
+    // Funcionalidad para los menús desplegables
     
     navItems.forEach(item => {
         const dropdown = item.querySelector('.dropdown');

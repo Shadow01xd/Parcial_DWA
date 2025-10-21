@@ -5,10 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>UNIVO - Universidad de Oriente</title>
     <link rel="stylesheet" href="../src/styles/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <header class="header">
         <a href="#" class="logo">UNIVO</a>
+        <button class="mobile-menu-toggle" aria-label="Abrir menú">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+        </button>
         <nav class="nav">
             <div class="nav-item">
                 <a href="#" class="nav-link">Inicio</a>
@@ -128,11 +134,12 @@
 <!-- Features Section -->
       <section class="container_2">
         <div class="background-image">
-          <img src="../src/Assets/img/weones.png" alt="Imagen de fondo" class="container-background">
+          <img src="../src/Assets/img/Linea.png" alt="Línea decorativa" class="linea-background">
+          <img src="../src/Assets/img/chicos.png" alt="Estudiantes" class="students-image">
         </div>
         
         <div class="text-section">
-          <h1>Tu futuro comienza hoy,<br>nosotros te guiamos.</h1>
+          <h2>Tu futuro comienza hoy,<br>nosotros te guiamos.</h1>
           <p>En UNIVO te acompañamos a convertir tus metas en logros reales. 
             Descubre nuestras carreras, conoce el proceso de admisión y da el primer paso con confianza.</p>
     
@@ -152,7 +159,7 @@
             <div class="info-item">
               <i class="fa-solid fa-lightbulb"></i>
               <h3>Comunidad que impulsa tu crecimiento</h3>
-              <p>Campus modernos, clases virtuales.</p>
+              <p>Campus modernos, clases virtuales y apoyo constante.</p>
             </div>
     
             <a href="#" class="button">Explora tu futuro</a>
@@ -228,7 +235,7 @@
       <!-- Admission Section -->
     <section class="admission-section">
         <div class="section-header">
-            <h1>Ingreso y Admisión UNIVO</h1>
+            <h2>Ingreso y Admisión UNIVO</h1>
             <p>Conoce un poco del proceso.</p>
         </div>
         
@@ -242,7 +249,7 @@
              <div class="step step-2">
                  <img src="../src/Assets/icons/Proceso de Admision.png" class="step-image" alt="Proceso de Admision">                 
                  <h3>Proceso de Admisión</h3>
-                 <p>Requisitos actualizados, curso propedéutico.</p>
+                 <p>Requisitos actualizados, curso propedéutico, horarios y calendario académico 01-2026.</p>
              </div>
              
              <div class="step step-3">
@@ -252,13 +259,13 @@
              </div>
              
              <div class="step step-4">
-                 <img src="../src/Assets/icons/Aranceles y Pagos.png" class="step-image" alt="">                   
+                 <img src="../src/Assets/icons/Aranceles y Pagos.png" class="step-image" alt="Aranceles y Pagos">                   
                  <h3>Aranceles y Pagos</h3>
-                 <p>Orientación profesional y exploración de áreas de estudio.</p>
+                 <p>Modalidades disponibles y pagos seguros en línea.</p>
              </div>
              
              <div class="step step-5">
-                 <img src="../src/Assets/icons/Apoyo al Aspirante.png" class="step-image" alt="">                        
+                 <img src="../src/Assets/icons/Apoyo al Aspirante.png" class="step-image" alt="Apoyo al Aspirante">                        
                  <h3>Apoyo al Aspirante</h3>
                  <p>Charlas informativas y asesoría personalizada para tu éxito.</p>
              </div>
@@ -282,7 +289,6 @@
   </section>
 
    <!-- Associations Section -->
-     
      <section class="associations-section">
          <div class="associations-header">
              <h2>Asociaciones</h2>
@@ -364,6 +370,68 @@
     </div>
   </section>
       
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-section">
+        <div class="footer-logo">
+          <img src="../src/Assets/img/univo-no-transparent.png" alt="UNIVO" class="univo-logo">
+        </div>
+      </div>
+      
+      <div class="footer-section">
+        <h3>Contáctenos</h3>
+        <p>4ta. Calle Poniente 705<br>San Miguel, El Salvador</p>
+        <p>admisiones@univo.edu.sv</p>
+      </div>
+      
+      <div class="footer-section">
+        <h3>Accesos Rápidos</h3>
+        <ul>
+          <li><a href="#">UNIVO News</a></li>
+          <li><a href="#">UNIVO Tv</a></li>
+          <li><a href="#">UNIVO Radio</a></li>
+          <li><a href="#">CIDE</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-section-cda">
+        <div class="accreditation">
+          <div class="cda-logo">
+            <img src="../src/Assets/img/cda.webp" alt="CDA" class="cda-logo">
+          </div>
+        </div>
+        
+        <div class="transparency">
+          <h3>UNIVERSIDAD TRANSPARENTE</h3>
+          <p><a href="#">Acceso a información pública</a></p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <div class="footer-bottom-content">
+        <p class="copyright">Universidad de Oriente © 2025 | All Rights Reserved.</p>
+        <div class="social-media">
+          <a href="#" class="social-icon" aria-label="Facebook">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="#" class="social-icon" aria-label="Instagram">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="#" class="social-icon" aria-label="Twitter">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="#" class="social-icon" aria-label="YouTube">
+            <i class="fab fa-youtube"></i>
+          </a>
+          <a href="#" class="social-icon" aria-label="TikTok">
+            <i class="fab fa-tiktok"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
 
     <script src="../src/Scripts/main.js"></script>
 </body>
