@@ -1,4 +1,4 @@
-// JavaScript para funcionalidad del header y hero slider
+// Header and hero slider functionality
 document.addEventListener('DOMContentLoaded', function () {
     const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
     const nav = document.querySelector('.nav');
@@ -118,7 +118,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
-    // Hero Slider Functionality
+    // Hero Slider
     const slides = document.querySelectorAll('.slide');
     if (slides.length > 0) {
         const indicators = document.querySelectorAll('.indicator');
@@ -255,11 +255,14 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 const root = document.querySelector('.oferta-tabs');
-const tablist = root.querySelector('.oferta-tabs__tablist');
-const tabs = Array.from(root.querySelectorAll('.oferta-tabs__tab'));
-const panels = Array.from(root.querySelectorAll('.oferta-tabs__panel'));
-const mq = window.matchMedia('(max-width: 768px)');
-const host = root.querySelector('.oferta-tabs__wrap');
+if (!root) {
+    console.log('Oferta tabs not found, skipping initialization');
+} else {
+    const tablist = root.querySelector('.oferta-tabs__tablist');
+    const tabs = Array.from(root.querySelectorAll('.oferta-tabs__tab'));
+    const panels = Array.from(root.querySelectorAll('.oferta-tabs__panel'));
+    const mq = window.matchMedia('(max-width: 768px)');
+    const host = root.querySelector('.oferta-tabs__wrap');
 
 function setActive(i, focus = false) {
     tabs.forEach((t, idx) => {
@@ -309,70 +312,89 @@ const id = location.hash.slice(1);
 const idx = Math.max(0, tabs.findIndex(t => t.id === id));
 setActive(idx, false);
 
-handleMQ(mq);
-mq.addEventListener('change', handleMQ);
-
-
-
-
-//------------------------------------------
-
-(() => {
-    const root = document.querySelector('.oferta-tabs');
-    const tablist = root.querySelector('.oferta-tabs__tablist');
-    const tabs = Array.from(root.querySelectorAll('.oferta-tabs__tab'));
-    const panels = Array.from(root.querySelectorAll('.oferta-tabs__panel'));
-    const mq = window.matchMedia('(max-width: 768px)');
-    const host = root.querySelector('.oferta-tabs__wrap');
-
-    function setActive(i, focus = false) {
-        tabs.forEach((t, idx) => {
-            const on = idx === i;
-            t.setAttribute('aria-selected', on);
-            t.tabIndex = on ? 0 : -1;
-            panels[idx].hidden = !on;
-        });
-        if (focus) tabs[i].focus();
-        history.replaceState(null, '', '#' + tabs[i].id);
-        if (mq.matches) {
-            tablist.insertBefore(panels[i], tabs[i].nextSibling);
-        }
-    }
-
-    function enterMobile() {
-        const activeIdx = tabs.findIndex(t => t.getAttribute('aria-selected') === 'true') || 0;
-        tabs.forEach((t, idx) => {
-            panels[idx].hidden = idx !== activeIdx;
-            tablist.insertBefore(panels[idx], t.nextSibling);
-        });
-    }
-
-    function exitMobile() {
-        tabs.forEach((_, idx) => host.appendChild(panels[idx]));
-    }
-
-    function handleMQ(e) { e.matches ? enterMobile() : exitMobile(); }
-
-    tabs.forEach((b, i) => b.addEventListener('click', () => setActive(i, false)));
-
-    tablist.addEventListener('keydown', e => {
-        const cur = tabs.findIndex(t => t.getAttribute('aria-selected') === 'true');
-        if (['ArrowRight', 'ArrowLeft', 'Home', 'End'].includes(e.key)) {
-            e.preventDefault();
-            let next = cur;
-            if (e.key === 'ArrowRight') next = (cur + 1) % tabs.length;
-            if (e.key === 'ArrowLeft') next = (cur - 1 + tabs.length) % tabs.length;
-            if (e.key === 'Home') next = 0;
-            if (e.key === 'End') next = tabs.length - 1;
-            setActive(next, true);
-        }
-    });
-
-    // Deep-link
-    const id = location.hash.slice(1);
-    const idx = Math.max(0, tabs.findIndex(t => t.id === id));
-    setActive(idx, false);
-
     handleMQ(mq);
     mq.addEventListener('change', handleMQ);
-})();
+}
+
+// Scroll to top functionality
+function initScrollToTop() {
+    const scrollToTopBtn = document.getElementById('scrollToTop');
+    
+    if (!scrollToTopBtn) {
+        return;
+    }
+    
+    // Función para mostrar/ocultar el botón
+    function handleScroll() {
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        
+        if (scrollTop > 300) {
+            scrollToTopBtn.classList.add('show');
+        } else {
+            scrollToTopBtn.classList.remove('show');
+        }
+    }
+    
+    // Event listener para el scroll
+    window.addEventListener('scroll', handleScroll);
+    
+    // Verificar posición inicial
+    handleScroll();
+    
+    // Funcionalidad de scroll suave al hacer clic
+    scrollToTopBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+}
+
+// Initialize on DOM ready
+document.addEventListener('DOMContentLoaded', initScrollToTop);
+
+// Advertisement modal
+document.addEventListener('DOMContentLoaded', function() {
+    const anuncioModal = document.getElementById('anuncioModal');
+    const closeBtn = document.querySelector('.anuncio-close');
+    
+    if (anuncioModal) {
+        // Show modal with delay for better UX
+        setTimeout(() => {
+            anuncioModal.classList.add('show');
+        }, 500);
+        
+        // Close modal on close button click
+        if (closeBtn) {
+            closeBtn.addEventListener('click', function() {
+                anuncioModal.classList.remove('show');
+                // Hide completely after animation
+                setTimeout(() => {
+                    anuncioModal.style.display = 'none';
+                }, 300);
+            });
+        }
+        
+        // Close modal on overlay click
+        const overlay = document.querySelector('.anuncio-overlay');
+        if (overlay) {
+            overlay.addEventListener('click', function() {
+                anuncioModal.classList.remove('show');
+                setTimeout(() => {
+                    anuncioModal.style.display = 'none';
+                }, 300);
+            });
+        }
+        
+        // Close modal with Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && anuncioModal.classList.contains('show')) {
+                anuncioModal.classList.remove('show');
+                setTimeout(() => {
+                    anuncioModal.style.display = 'none';
+                }, 300);
+            }
+        });
+    }
+});

@@ -1,0 +1,1244 @@
+/* Carreras page specific styles */
+
+body.carreras-page {
+    background-color: #eef3f9;
+}
+
+/* Header override for carreras page */
+body.carreras-page .header {
+    background-color: #ffffff;
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+    box-shadow: 0 6px 24px rgba(10, 41, 72, 0.1);
+    border-bottom: 1px solid rgba(10, 41, 72, 0.08);
+}
+
+body.carreras-page .logo,
+body.carreras-page .nav-link {
+    color: #00406e;
+}
+
+body.carreras-page .nav-link:hover {
+    color: #002d4a;
+}
+
+body.carreras-page .nav-link.active {
+    color: #002d4a;
+}
+
+body.carreras-page .nav-item:hover > .nav-link,
+body.carreras-page .nav-item:focus-within > .nav-link {
+    color: #002d4a;
+}
+
+body.carreras-page .nav-item:hover .nav-link::after {
+    opacity: 1;
+    transform: scaleX(1);
+}
+
+body.carreras-page .hamburger-line {
+    background-color: #00406e;
+}
+
+/* En menú móvil activo, los links vuelven a ser blancos */
+body.carreras-page .nav.active .nav-link,
+body.carreras-page .nav.active .dropdown-item {
+    color: #ffffff;
+}
+
+body.carreras-page .nav.active .nav-link::after,
+body.carreras-page .nav.active .dropdown-item::after {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+body.carreras-page .carreras-main {
+    margin-top: 0;
+}
+
+
+/* ================================================================================
+   2. HERO SECTION (LEADERSHIP SECTION)
+   ================================================================================ */
+
+.leadership-section {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    margin-top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.leadership-section img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    z-index: 0;
+}
+
+.leadership-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #0C1E47CC;
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 30px;
+    max-width: 1200px;
+    width: 100%;
+    padding: 0 20px;
+    justify-content: space-between;
+}
+
+.text-content {
+    flex: 1;
+    min-width: 300px;
+}
+
+.text-content h1 {
+    font-size: 4rem;
+    color: white;
+    margin-bottom: 25px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.text-content p {
+    font-size: 1.5rem;
+    color: white;
+    margin-bottom: 35px;
+    max-width: 500px;
+}
+
+.buttons {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.btn-primary {
+    background-color: #1a3a8f;
+    color: white;
+    padding: 14px 30px;
+    border-radius: 100px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-block;
+    text-align: center;
+}
+
+.btn-primary:hover {
+    background-color: #15307a;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(26, 58, 143, 0.3);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+    padding: 14px 30px;
+    border-radius: 100px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-block;
+    text-align: center;
+}
+
+.btn-secondary:hover {
+    background-color: white;
+    color: #1a3a8f;
+    transform: translateY(-3px);
+}
+
+.stats-content {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    justify-content: left;
+}
+
+.stats-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    width: 100%;
+    gap: 40px;
+}
+
+.stat-item {
+    text-align: left;
+    flex: 0 0 auto;
+    min-width: 200px;
+}
+
+.stat-number {
+    font-size: 3rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 10px;
+    line-height: 1;
+}
+
+.stat-label {
+    font-size: 1rem;
+    color: white;
+    max-width: 200px;
+    margin: 0 auto;
+}
+
+.stats-footer {
+    text-align: center;
+    margin-top: 20px;
+    color: white;
+    font-size: 0.9rem;
+}
+
+
+/* ================================================================================
+   3. ¿POR QUÉ ELEGIR UNIVO?
+   ================================================================================ */
+
+body.carreras-page .why-univo {
+    padding: 80px 5vw 40px;
+    background: transparent;
+}
+
+body.carreras-page .why-univo__header {
+    text-align: center;
+    max-width: 680px;
+    margin: 0 auto 48px;
+    position: relative;
+}
+
+body.carreras-page .why-univo__title {
+    font-size: clamp(32px, 4vw, 40px);
+    color: #00406e;
+    margin-bottom: 12px;
+    position: relative;
+    display: inline-block;
+    margin: 0 auto 32px;
+}
+
+/* Barra azul decorativa debajo del título */
+body.carreras-page .why-univo__title::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -12px;
+    width: 130px;
+    height: 6px;
+    background: #0a4b86;
+    border-radius: 4px;
+}
+
+body.carreras-page .why-univo__grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(320px, 1fr));
+    gap: 32px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+body.carreras-page .why-card {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 50px 30px;
+    box-shadow: 0 20px 45px rgba(7, 41, 72, 0.12);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 18px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+}
+
+body.carreras-page .why-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 32px 64px rgba(7, 41, 72, 0.2);
+    background: linear-gradient(135deg, #ffffff 0%, #f8fbff 100%);
+}
+
+body.carreras-page .why-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    border-radius: 16px 16px 0 0;
+    background: #0a4b86;
+    transition: all 0.3s ease;
+}
+
+body.carreras-page .why-card:hover::before {
+    height: 8px;
+    background: linear-gradient(90deg, #FCC30B 0%, #e6b008 100%);
+    box-shadow: 0 4px 12px rgba(252, 195, 11, 0.4);
+}
+
+body.carreras-page .why-card__icon {
+    width: 92px;
+    height: 92px;
+    border-radius: 50%;
+    border: 4px solid #00406e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #e7f0f8;
+    transition: all 0.3s ease;
+}
+
+body.carreras-page .why-card:hover .why-card__icon {
+    transform: scale(1.1);
+    border-color: #FCC30B;
+    background: linear-gradient(135deg, #FCC30B 0%, #e6b008 100%);
+    box-shadow: 0 8px 24px rgba(252, 195, 11, 0.3);
+}
+
+body.carreras-page .why-card__icon-image {
+    max-width: 60%;
+    max-height: 60%;
+    object-fit: contain;
+}
+
+body.carreras-page .why-card__title {
+    font-size: 20px;
+    color: #00406e;
+    font-weight: 700;
+    transition: all 0.3s ease;
+}
+
+body.carreras-page .why-card__description {
+    color: #244660;
+    font-size: 16px;
+    line-height: 1.6;
+    transition: all 0.3s ease;
+}
+
+body.carreras-page .why-card:hover .why-card__title {
+    color: #0a4b86;
+    transform: translateY(-2px);
+}
+
+body.carreras-page .why-card:hover .why-card__description {
+    color: #00406e;
+    transform: translateY(-2px);
+}
+
+
+/* ================================================================================
+   4. CARRERAS DESTACADAS (FEATURED CAREERS)
+   ================================================================================ */
+
+.featured-careers {
+    padding: 80px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.featured-careers h2 {
+    font-size: 2.5rem;
+    color: #00406E;
+    text-align: center;
+    margin-bottom: 60px;
+    font-weight: 700;
+}
+
+.careers-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.career-card {
+    background-color: #00406E;
+    border-radius: 15px;
+    padding: 20px 15px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(26, 58, 143, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    min-height: 200px;
+}
+
+.career-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(26, 58, 143, 0.3);
+}
+
+.career-card h3 {
+    font-family: var(--font);
+    color: white;
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+.career-icon {
+    width: 10em;
+    height: 10em;
+    margin: 0 auto 25px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: white;
+}
+
+.career-icon-img {
+    width: 9em;
+    height: 9em;
+    object-fit: contain;
+    filter: brightness(0) invert(1);
+}
+
+.career-description {
+    font-family: var(--font);
+    color: white;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    opacity: 0.9;
+    flex-grow: 1;
+}
+
+.career-btn {
+    width: 10em;
+    background-color: #FDD03A;
+    color: black;
+    padding: 12px 30px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    display: inline-block;
+    margin-top: auto;
+    align-self: center;
+}
+
+.career-btn:hover {
+    background-color: #C49F2C;
+}
+
+
+/* ================================================================================
+   5. SECCIÓN CARRERAS (DESCRIPCIÓN Y CONTENIDO)
+   ================================================================================ */
+
+.carreras {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 60vh;
+    padding: 120px 5% 80px;
+    gap: 60px;
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden;
+}
+
+.carreras-titulo {
+    font-size: 56px;
+    color: #003366;
+    font-weight: 700;
+    margin: 0;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+    position: absolute;
+    top: 40px;
+    left: 0;
+    z-index: 3;
+}
+
+.carreras-fondo {
+    position: absolute;
+    right: 50%;
+    top: 50%;
+    transform: translate(70%, -50%);
+    width: clamp(600px, 50vw, 800px);
+    height: auto;
+    object-fit: contain;
+    z-index: 1;
+    margin-right: -50px;
+}
+
+.carreras-contenido {
+    max-width: 600px;
+    width: 100%;
+    color: #4a4a4a;
+    line-height: 1.8;
+    font-size: 17px;
+    position: relative;
+    z-index: 2;
+    margin-top: 10px;
+    flex-shrink: 1;
+}
+
+.carreras-imagen-superpuesta {
+    position: relative;
+    z-index: 2;
+    flex-shrink: 0;
+}
+
+.carreras-imagen-superpuesta img {
+    width: clamp(350px, 30vw, 420px);
+    height: auto;
+    margin-left: 110px;
+}
+
+
+/* ================================================================================
+   6. OFERTA ACADÉMICA (TABS)
+   ================================================================================ */
+
+.ofertas_full {
+    position: relative;
+    isolation: isolate;
+    max-width: 1200px;
+    margin-inline: auto;
+    padding-inline: clamp(12px, 3vw, 24px);
+    padding-block: clamp(1rem, 3vw, 2rem);
+    padding-bottom: clamp(140px, 26vw, 260px);
+}
+
+.oferta-tabs__lead {
+    color: var(--azul);
+    font-weight: 800;
+    font-size: clamp(1.5rem, 3.8vw, 3.5rem);
+    line-height: 1.35;
+    text-align: center;
+    margin: 0 auto clamp(1rem, 3vw, 1.5rem);
+}
+
+.ofertas_decor {
+    position: absolute;
+    margin: 0 auto;
+    z-index: 0;
+    overflow: hidden;
+    width: 1250px;
+}
+
+.ofertas_decor img {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.oferta-tabs {
+    position: relative;
+    z-index: 2;
+    background: #fff;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, .05);
+    margin: 0 auto;
+}
+
+.oferta-tabs__wrap {
+    position: relative;
+    z-index: 1;
+}
+
+.oferta-tabs__tablist {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: clamp(6px, 1.8vw, 10px);
+    padding-block: clamp(4px, 1vw, 8px);
+}
+
+.oferta-tabs__tab {
+    appearance: none;
+    background: #fff;
+    border: 2px solid transparent;
+    border-radius: 6px;
+    padding: clamp(6px, .9vw, 10px) clamp(8px, 1.2vw, 14px);
+    font-weight: 800;
+    font-size: clamp(14px, 1.6vw, 18px);
+    line-height: 1.2;
+    color: var(--gris);
+    cursor: pointer;
+    transition: color .18s, border-color .18s;
+    white-space: nowrap;
+    min-height: 40px;
+}
+
+.oferta-tabs__tab[aria-selected="true"] {
+    color: var(--azul);
+    border-color: #4298D3;
+    cursor: default;
+}
+
+.oferta-tabs__tab:not([aria-selected="true"]):hover {
+    color: var(--amarillo);
+}
+
+.oferta-tabs__tab[aria-selected="true"]:hover {
+    color: var(--azul);
+}
+
+.oferta-tabs__tab:focus-visible {
+    outline: 2px solid color-mix(in oklab, var(--azul), transparent 70%);
+    outline-offset: 2px;
+}
+
+.oferta-tabs__panel {
+    margin-top: clamp(10px, 1.8vw, 18px);
+    padding: clamp(14px, 2.2vw, 20px) 0;
+}
+
+.oferta-tabs__panel[hidden] {
+    display: none;
+}
+
+.oferta-tabs__grid {
+    display: grid;
+    align-items: start;
+    grid-template-columns: 1.2fr .9fr;
+    gap: clamp(14px, 3vw, 20px);
+}
+
+.oferta-tabs__list {
+    list-style: none;
+    margin: 0;
+    padding: 30px;
+    display: grid;
+    gap: clamp(10px, 1.8vw, 18px);
+}
+
+.oferta-tabs__list a {
+    color: var(--azul);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    display: inline-block;
+    padding-block: clamp(2px, .4vw, 4px);
+    font-size: clamp(14px, 1.6vw, 18px);
+}
+
+.oferta-tabs__list a:hover {
+    color: var(--amarillo);
+}
+
+.oferta-tabs__pic {
+    border-radius: 5px;
+    overflow: hidden;
+    aspect-ratio: 16/9;
+    margin-right: 10%;
+}
+
+.oferta-tabs__pic img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+
+/* ================================================================================
+   7. PROCESO DE ADMISIÓN
+   ================================================================================ */
+
+.proceso-admision {
+    text-align: center;
+    padding: 80px 20px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.proceso-header h2 {
+    font-size: 50px;
+    color: #003366;
+    margin-bottom: 10px;
+}
+
+.proceso-header h2 span {
+    text-decoration: underline;
+    text-decoration-thickness: 3px;
+    text-underline-offset: 8px;
+}
+
+.proceso-header p {
+    font-size: 30px;
+    color: #7a7a7a;
+    margin-bottom: 50px;
+    padding-block: 0 75px;
+}
+
+.proceso-pasos {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.paso {
+    flex: 1 1 200px;
+    max-width: 250px;
+    text-align: center;
+}
+
+.numero {
+    width: 45px;
+    height: 45px;
+    margin: 0 auto 12px auto;
+    background-color: #003366;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.paso h3 {
+    font-size: 18px;
+    color: #003366;
+    margin-bottom: 10px;
+}
+
+.paso p {
+    font-size: 15px;
+    color: #7a7a7a;
+    line-height: 1.5;
+}
+
+
+/* ================================================================================
+   8. BANNER WHATSAPP
+   ================================================================================ */
+
+.whatsapp-banner {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.whatsapp-content {
+    background-color: #00406E;
+    padding: 40px 50px;
+    text-align: center;
+    width: 100%;
+    box-shadow: 0 10px 30px rgba(26, 58, 143, 0.2);
+    margin-bottom: 2%;
+    margin-top: 1%;
+}
+
+.whatsapp-content h3 {
+    color: white;
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    font-family: var(--font);
+}
+
+.whatsapp-content p {
+    color: white;
+    font-size: 2rem;
+    margin-bottom: 30px;
+    font-family: var(--font);
+}
+
+.whatsapp-btn {
+    background-color: white;
+    color: #1a3a8f;
+    padding: 15px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    font-family: var(--font);
+}
+
+.whatsapp-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    background-color: #f8f9fa;
+}
+
+.whatsapp-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.whatsapp-icon svg {
+    width: 24px;
+    height: 24px;
+}
+
+
+/* ================================================================================
+   9. MEDIA QUERIES RESPONSIVAS
+   ================================================================================ */
+
+/* Tablet */
+@media (max-width: 1024px) {
+    .hero-content {
+        margin-left: 15%;
+        gap: 40px;
+    }
+
+    .text-content h1 {
+        font-size: 3.2rem;
+    }
+
+    .text-content p {
+        font-size: 1.3rem;
+    }
+
+    body.carreras-page .why-univo__grid {
+        grid-template-columns: repeat(2, minmax(260px, 1fr));
+    }
+
+    .carreras {
+        gap: 40px;
+        padding: 120px 3% 80px;
+    }
+
+    .carreras-contenido {
+        max-width: 500px;
+        font-size: 16px;
+    }
+
+    .carreras-fondo {
+        width: clamp(500px, 45vw, 700px);
+        transform: translate(70%, -50%);
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .leadership-section {
+        padding: 60px 15px;
+    }
+
+    .hero-content {
+        flex-direction: column;
+        gap: 30px;
+        margin-left: 0;
+        margin-right: 0;
+        max-width: 100%;
+        align-items: center;
+    }
+
+    .text-content {
+        text-align: center;
+        width: 100%;
+    }
+
+    .text-content h1 {
+        font-size: 2.5rem;
+        line-height: 1.1;
+        margin-bottom: 20px;
+    }
+
+    .text-content p {
+        font-size: 1.1rem;
+        max-width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .buttons {
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 15px;
+        width: 100%;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+        width: 100%;
+        max-width: 280px;
+        padding: 12px 24px;
+        font-size: 0.9rem;
+    }
+
+    .stats-content {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .stats-container {
+        justify-content: center;
+        gap: 30px;
+        flex-wrap: wrap;
+    }
+
+    .stat-item {
+        min-width: 150px;
+        text-align: center;
+    }
+
+    .stat-number {
+        font-size: 2.2rem;
+    }
+
+    .stat-label {
+        font-size: 0.9rem;
+    }
+
+    body.carreras-page .carreras-main {
+        margin-top: 0;
+    }
+
+    body.carreras-page .why-univo {
+        padding: 50px 24px 60px;
+    }
+
+    body.carreras-page .why-univo__grid {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+
+    body.carreras-page .why-card {
+        padding: 32px 28px;
+    }
+
+    .featured-careers {
+        padding: 60px 15px;
+    }
+
+    .featured-careers h2 {
+        font-size: 2rem;
+        margin-bottom: 40px;
+    }
+
+    .careers-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .career-card {
+        padding: 30px 20px;
+    }
+
+    .career-card h3 {
+        font-size: 1.2rem;
+    }
+
+    .whatsapp-banner {
+        padding: 40px 15px;
+    }
+
+    .whatsapp-content {
+        padding: 30px 25px;
+    }
+
+    .whatsapp-content h3 {
+        font-size: 1.5rem;
+    }
+
+    .whatsapp-content p {
+        font-size: 1rem;
+    }
+
+    .whatsapp-btn {
+        padding: 12px 25px;
+        font-size: 0.9rem;
+    }
+
+    .carreras {
+        flex-direction: column;
+        text-align: center;
+        padding: 120px 30px 60px;
+        gap: 20px;
+    }
+
+    .carreras-fondo {
+        display: none;
+    }
+
+    .carreras-titulo {
+        font-size: 42px;
+        position: relative;
+        top: 0;
+        margin-bottom: 20px;
+    }
+
+    .carreras-contenido {
+        max-width: 100%;
+        font-size: 16px;
+        line-height: 1.6;
+        margin-top: 0;
+    }
+
+    .carreras-imagen-superpuesta img {
+        width: min(300px, 90vw);
+        margin-top: 10px;
+        margin-left: 10px;
+    }
+
+    .proceso-pasos {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .paso {
+        max-width: 260px;
+    }
+
+    /* Tabs responsivo */
+    .ofertas_full {
+        padding-block: clamp(.75rem, 2.5vw, 1.5rem);
+        padding-inline: clamp(12px, 3vw, 20px);
+        padding-bottom: clamp(120px, 24vw, 220px);
+        max-width: 100%;
+    }
+
+    .ofertas_decor {
+        max-width: 0;
+    }
+
+    .oferta-tabs__lead {
+        font-size: clamp(1.25rem, 4.5vw, 2rem);
+        line-height: 1.3;
+        max-width: 52ch;
+        margin: 0 auto clamp(12px, 2.4vw, 18px);
+        padding-inline: 8px;
+    }
+
+    .oferta-tabs {
+        max-width: 100%;
+    }
+
+    .oferta-tabs__tablist {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        border: 1px solid #e7edf4;
+        border-radius: 6px;
+        overflow: hidden;
+    }
+
+    .oferta-tabs__tab {
+        width: 100%;
+        text-align: left;
+        border: 0;
+        border-bottom: 1px solid #e7edf4;
+        background: #fff;
+        color: #6b7b8c;
+        font-size: 16px;
+        padding: 12px 14px;
+        border-radius: 0;
+    }
+
+    .oferta-tabs__tab[aria-selected="true"] {
+        color: var(--azul);
+        border: 0;
+        border-bottom: 1px solid #e7edf4;
+        box-shadow: inset 0 0 0 2px #4298D3;
+        border-radius: 6px 6px 0 0;
+    }
+
+    .oferta-tabs__panel {
+        margin-top: 0;
+        padding: 12px;
+        border: 1px solid #e7edf4;
+        border-top: 0;
+        border-radius: 0 0 6px 6px;
+    }
+
+    .oferta-tabs__grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .oferta-tabs__pic {
+        aspect-ratio: auto;
+    }
+
+    .oferta-tabs__list a {
+        font-size: 16px;
+    }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+    .leadership-section {
+        padding: 40px 10px;
+    }
+
+    .text-content h1 {
+        font-size: 2rem;
+        line-height: 1.1;
+    }
+
+    .text-content p {
+        font-size: 1rem;
+    }
+
+    .buttons {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+        width: 100%;
+        max-width: 200px;
+        padding: 10px 20px;
+        font-size: 0.85rem;
+    }
+
+    .stats-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .stat-item {
+        min-width: 100px;
+    }
+
+    .stat-number {
+        font-size: 1.8rem;
+    }
+
+    .stat-label {
+        font-size: 0.8rem;
+    }
+}
+
+/* Pantallas grandes */
+@media (min-width: 1200px) {
+    .carreras {
+        gap: 30px;
+    }
+
+    .carreras-contenido {
+        max-width: 450px;
+        font-size: 15px;
+    }
+
+    .carreras-fondo {
+        transform: translate(70%, -50%);
+    }
+}
+
+@media (min-width: 1400px) {
+    .carreras {
+        gap: 40px;
+        padding: 120px 3% 80px;
+    }
+
+    .carreras-contenido {
+        max-width: 500px;
+        font-size: 16px;
+    }
+
+    .carreras-fondo {
+        width: clamp(500px, 45vw, 700px);
+        transform: translate(70%, -50%);
+    }
+}
+
+@media (min-width: 1600px) {
+    .carreras-fondo {
+        right: 45%;
+        transform: translate(70%, -50%);
+    }
+}
+
+@media (min-width: 2000px) {
+    .carreras-fondo {
+        right: 45%;
+        transform: translate(70%, -50%);
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 1190px) {
+    .ofertas_full {
+        padding-block: clamp(.75rem, 2.5vw, 1.5rem);
+        padding-inline: clamp(12px, 3vw, 20px);
+        padding-bottom: clamp(120px, 24vw, 220px);
+        max-width: 100%;
+    }
+
+    .ofertas_decor {
+        max-width: 800px;
+    }
+
+    .oferta-tabs__lead {
+        font-size: clamp(1.25rem, 4.5vw, 2rem);
+        line-height: 1.3;
+        max-width: 52ch;
+        margin: 0 auto clamp(12px, 2.4vw, 18px);
+        padding-inline: 8px;
+    }
+
+    .oferta-tabs {
+        max-width: 100%;
+    }
+
+    .oferta-tabs__tablist {
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        gap: 8px 14px;
+        padding-block: 8px;
+    }
+
+    .oferta-tabs__tab {
+        font-size: 15px;
+        padding: 10px 12px;
+        min-height: 36px;
+    }
+
+    .oferta-tabs__panel {
+        margin-top: 12px;
+        padding: 12px 0;
+    }
+
+    .oferta-tabs__grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .oferta-tabs__pic {
+        aspect-ratio: auto;
+    }
+
+    .oferta-tabs__list a {
+        font-size: 16px;
+    }
+}
+

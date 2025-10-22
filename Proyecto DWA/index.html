@@ -3,14 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Universidad de Oriente UNIVO - Tu futuro comienza hoy. Descubre nuestras carreras y conviértete en un profesional de éxito.">
+    <meta name="theme-color" content="#00406E">
+    <meta name="format-detection" content="telephone=no">
     <title>UNIVO - Universidad de Oriente</title>
-    <link rel="stylesheet" href="../src/styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
 </head>
 <body>
+    <!-- Modal de Anuncio -->
+    <div id="anuncioModal" class="anuncio-modal">
+        <div class="anuncio-overlay"></div>
+        <div class="anuncio-content">
+            <div class="anuncio-image-container">
+                <img src="assets/images/Anuncio.png" alt="Anuncio de Admisiones Ciclo I - 2026" class="anuncio-image">
+                <button class="anuncio-close" aria-label="Cerrar anuncio">
+                    CERRAR
+                </button>
+            </div>
+        </div>
+    </div>
+
     <header class="header">
         <a href="index.html" class="logo" aria-label="Ir al inicio">
-            <img src="../src/Assets/img/univo.png" alt="UNIVO" class="logo-image">
+            <img src="assets/images/univo.png" alt="UNIVO" class="logo-image">
         </a>
         <button class="mobile-menu-toggle" aria-label="Abrir menú">
             <span class="hamburger-line"></span>
@@ -19,7 +40,7 @@
         </button>
         <nav class="nav">
             <div class="nav-header">
-                <a href="index.html" class="nav-logo"><img src="../src/Assets/img/univo.png" alt="UNIVO" class="logo-image"></a>
+                <a href="index.html" class="nav-logo"><img src="assets/images/univo.png" alt="UNIVO" class="logo-image"></a>
                 <button class="nav-close" aria-label="Cerrar menú">✕</button>
             </div>
             <div class="nav-item">
@@ -81,13 +102,14 @@
         </nav>
     </header>
 
-    <!-- Hero Slider -->
-    <section class="hero-slider">
+    <main>
+        <!-- Hero Slider -->
+        <section class="hero-slider">
         <div class="slider-container">
             <!-- Slide 1: Video Banner SW 2026 -->
             <div class="slide active">
                 <video class="slide-video" autoplay muted loop>
-                    <source src="../src/Assets/videos/Banner-SW-2026-4.mp4" type="video/mp4">
+                    <source src="assets/videos/Banner-SW-2026-4.mp4" type="video/mp4">
                 </video>
                 <div class="slide-overlay">
                     <div class="slide-content">
@@ -99,11 +121,11 @@
             <!-- Slide 2: UNIVO y ALBUS -->
             <div class="slide">
                 <div class="slide-background">
-                    <img src="../src/Assets/img/Slider-Banner-BG-1.png" alt="Background" class="banner-bg-image">
+                    <img src="assets/images/Slider-Banner-BG-1.png" alt="Background" class="banner-bg-image" loading="lazy">
                 </div>
                 <div class="slide-content">
-                    <img src="../src/Assets/img/univo.png" alt="UNIVO" class="univo-logo">
-                    <img src="../src/Assets/img/ALBUS-blanco.png" alt="ALBUS" class="albus-logo">
+                    <img src="assets/images/univo.png" alt="UNIVO" class="univo-logo" loading="lazy">
+                    <img src="assets/images/ALBUS-blanco.png" alt="ALBUS" class="albus-logo" loading="lazy">
                     <button class="cta-button">Albus 2025 - International Conference</button>
                 </div>
             </div>
@@ -111,7 +133,7 @@
             <!-- Slide 3: Video Banner Maestrías -->
             <div class="slide">
                 <video class="slide-video" muted loop>
-                    <source src="../src/Assets/videos/Banner-Maestrias-sitio-web-2.mp4" type="video/mp4">
+                    <source src="assets/videos/Banner-Maestrias-sitio-web-2.mp4" type="video/mp4">
                 </video>
                 <div class="slide-overlay">
                     <div class="slide-content">
@@ -123,10 +145,10 @@
 
         <!-- Navigation Arrows -->
         <button class="slider-btn slider-btn-prev">
-            <img src="../src/Assets/icons/Flecha.png" alt="Siguiente" class="arrow-icon next-arrow">
+            <img src="assets/icons/Flecha.png" alt="Siguiente" class="arrow-icon next-arrow">
         </button>
         <button class="slider-btn slider-btn-next">
-            <img src="../src/Assets/icons/Flecha.png" alt="Anterior" class="arrow-icon">
+            <img src="assets/icons/Flecha.png" alt="Anterior" class="arrow-icon">
         </button>
 
         <!-- Slider Indicators -->
@@ -140,12 +162,12 @@
 <!-- Features Section -->
       <section class="container_2">
         <div class="background-image">
-          <img src="../src/Assets/img/Linea.png" alt="Línea decorativa" class="linea-background">
-          <img src="../src/Assets/img/chicos.png" alt="Estudiantes" class="students-image">
+          <img src="assets/images/Linea.png" alt="Línea decorativa" class="linea-background" loading="lazy">
+          <img src="assets/images/chicos.png" alt="Estudiantes" class="students-image" loading="lazy">
         </div>
         
         <div class="text-section">
-          <h2>Tu futuro comienza hoy,<br>nosotros te guiamos.</h1>
+          <h1>Tu futuro comienza hoy,<br>nosotros te guiamos.</h1>
           <p>En UNIVO te acompañamos a convertir tus metas en logros reales. 
             Descubre nuestras carreras, conoce el proceso de admisión y da el primer paso con confianza.</p>
     
@@ -176,7 +198,7 @@
 
      <!-- Slider 2 -->
     <section class="uni-slider">
-        <div class="uni-viewport" aria-roledescription="carrusel">
+        <div class="uni-viewport" role="region" aria-roledescription="carrusel" aria-label="Carrusel de campus UNIVO">
           <button class="uni-arrow uni-arrow--prev" aria-label="Anterior">
             <svg viewBox="0 0 90 90" xmlns="http://www.w3.org/2000/svg" fill="none">
               <path d="M55 18 35 45l20 27" stroke="#FFC21F" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
@@ -185,46 +207,46 @@
       
           <div class="uni-track" id="track">
             <!-- SLIDE 1 -->
-            <article class="uni-slide" style="background-image:linear-gradient(0deg, rgba(0,64,110,0.70) 0%, rgba(0,64,110,0.70) 100%), url('../src/Assets/img/UNIVO-CENTRAL.webp');">
+            <article class="uni-slide" style="background-image:linear-gradient(0deg, rgba(0,64,110,0.70) 0%, rgba(0,64,110,0.70) 100%), url('assets/images/UNIVO-CENTRAL.webp');">
               <div class="uni-content">
                 <div class="uni-chip">UNIVERSIDAD DE ORIENTE UNIVO</div>
                 <h2 class="uni-title">SEDE CENTRAL</h2>
                 <p class="uni-sub">4ta. Calle Poniente 705 San Miguel, El Salvador</p>
                 <button class="uni-cta">Como llegar</button>
                 <div class="uni-thumbs">
-                  <button class="uni-thumb" data-index="0"><img src="../src/Assets/img/UNIVO-CENTRAL.webp"></button>
-                  <button class="uni-thumb" data-index="1"><img src="../src/Assets/img/UNIVO-CU.webp"></button>
-                  <button class="uni-thumb" data-index="2"><img src="../src/Assets/img/UNIVO-CA.webp"></button>
+                  <button class="uni-thumb" data-index="0" aria-label="Ver Sede Central"><img src="assets/images/UNIVO-CENTRAL.webp" alt="Sede Central"></button>
+                  <button class="uni-thumb" data-index="1" aria-label="Ver Ciudad Universitaria"><img src="assets/images/UNIVO-CU.webp" alt="Ciudad Universitaria"></button>
+                  <button class="uni-thumb" data-index="2" aria-label="Ver Campus Agronomía"><img src="assets/images/UNIVO-CA.webp" alt="Campus Agronomía"></button>
                 </div>
               </div>
             </article>
       
             <!-- SLIDE 2 -->
-            <article class="uni-slide" style="background-image:linear-gradient(0deg, rgba(0,64,110,0.70) 0%, rgba(0,64,110,0.70) 100%), url('../src/Assets/img/UNIVO-CU.webp');">
+            <article class="uni-slide" style="background-image:linear-gradient(0deg, rgba(0,64,110,0.70) 0%, rgba(0,64,110,0.70) 100%), url('assets/images/UNIVO-CU.webp');">
               <div class="uni-content">
                 <div class="uni-chip">UNIVERSIDAD DE ORIENTE UNIVO</div>
                 <h2 class="uni-title">CUIDAD UNIVERSITARIA</h2>
                 <p class="uni-sub">Carretera Panamericana, Quelepa, El Salvador</p>
                 <button class="uni-cta">Como llegar</button>
                 <div class="uni-thumbs">
-                  <button class="uni-thumb" data-index="0"><img src="../src/Assets/img/UNIVO-CENTRAL.webp"></button>
-                  <button class="uni-thumb" data-index="1"><img src="../src/Assets/img/UNIVO-CU.webp"></button>
-                  <button class="uni-thumb" data-index="2"><img src="../src/Assets/img/UNIVO-CA.webp"></button>
+                  <button class="uni-thumb" data-index="0" aria-label="Ver Sede Central"><img src="assets/images/UNIVO-CENTRAL.webp" alt="Sede Central"></button>
+                  <button class="uni-thumb" data-index="1" aria-label="Ver Ciudad Universitaria"><img src="assets/images/UNIVO-CU.webp" alt="Ciudad Universitaria"></button>
+                  <button class="uni-thumb" data-index="2" aria-label="Ver Campus Agronomía"><img src="assets/images/UNIVO-CA.webp" alt="Campus Agronomía"></button>
                 </div>
               </div>
             </article>
       
             <!-- SLIDE 3 -->
-            <article class="uni-slide" style="background-image:linear-gradient(0deg, rgba(0,64,110,0.70) 0%, rgba(0,64,110,0.70) 100%), url('../src/Assets/img/UNIVO-CA.webp');">
+            <article class="uni-slide" style="background-image:linear-gradient(0deg, rgba(0,64,110,0.70) 0%, rgba(0,64,110,0.70) 100%), url('assets/images/UNIVO-CA.webp');">
               <div class="uni-content">
                 <div class="uni-chip">UNIVERSIDAD DE ORIENTE UNIVO</div>
                 <h2 class="uni-title">CAMPUS DE AGRONOMNIA Y VETERINARIA UNIVO</h2>
                 <p class="uni-sub">Carretera a la Unión, desvío a Yayantique, Cantón Anchico</p>
                 <button class="uni-cta">Como llegar</button>
                 <div class="uni-thumbs">
-                  <button class="uni-thumb" data-index="0"><img src="../src/Assets/img/UNIVO-CENTRAL.webp"></button>
-                  <button class="uni-thumb" data-index="1"><img src="../src/Assets/img/UNIVO-CU.webp"></button>
-                  <button class="uni-thumb" data-index="2"><img src="../src/Assets/img/UNIVO-CA.webp"></button>
+                  <button class="uni-thumb" data-index="0" aria-label="Ver Sede Central"><img src="assets/images/UNIVO-CENTRAL.webp" alt="Sede Central"></button>
+                  <button class="uni-thumb" data-index="1" aria-label="Ver Ciudad Universitaria"><img src="assets/images/UNIVO-CU.webp" alt="Ciudad Universitaria"></button>
+                  <button class="uni-thumb" data-index="2" aria-label="Ver Campus Agronomía"><img src="assets/images/UNIVO-CA.webp" alt="Campus Agronomía"></button>
                 </div>
               </div>
             </article>
@@ -241,37 +263,37 @@
       <!-- Admission Section -->
     <section class="admission-section">
         <div class="section-header">
-            <h2>Ingreso y Admisión UNIVO</h1>
+            <h2>Ingreso y Admisión UNIVO</h2>
             <p>Conoce un poco del proceso.</p>
         </div>
         
          <div class="process-steps">
              <div class="step step-1">
-                <img src="../src/Assets/icons/Eleccion Vocacional.png" class="step-image" alt="Eleccion Vocacional">
+                <img src="assets/icons/Eleccion Vocacional.png" class="step-image" alt="Eleccion Vocacional">
                  <h3>Elección Vocacional</h3>
                  <p>Orientación profesional y exploración de áreas de estudio.</p>
              </div>
              
              <div class="step step-2">
-                 <img src="../src/Assets/icons/Proceso de Admision.png" class="step-image" alt="Proceso de Admision">                 
+                 <img src="assets/icons/Proceso de Admision.png" class="step-image" alt="Proceso de Admision">                 
                  <h3>Proceso de Admisión</h3>
                  <p>Requisitos actualizados, curso propedéutico, horarios y calendario académico 01-2026.</p>
              </div>
              
              <div class="step step-3">
-                 <img src="../src/Assets/icons/Inscripcion en Linea.png" class="step-image" alt="Inscripcion En Linea">                
+                 <img src="assets/icons/Inscripcion en Linea.png" class="step-image" alt="Inscripcion En Linea">                
                  <h3>Inscripción en Línea</h3>
                  <p>Guía paso a paso para matricularse fácilmente desde casa.</p>
              </div>
              
              <div class="step step-4">
-                 <img src="../src/Assets/icons/Aranceles y Pagos.png" class="step-image" alt="Aranceles y Pagos">                   
+                 <img src="assets/icons/Aranceles y Pagos.png" class="step-image" alt="Aranceles y Pagos">                   
                  <h3>Aranceles y Pagos</h3>
                  <p>Modalidades disponibles y pagos seguros en línea.</p>
              </div>
              
              <div class="step step-5">
-                 <img src="../src/Assets/icons/Apoyo al Aspirante.png" class="step-image" alt="Apoyo al Aspirante">                        
+                 <img src="assets/icons/Apoyo al Aspirante.png" class="step-image" alt="Apoyo al Aspirante">                        
                  <h3>Apoyo al Aspirante</h3>
                  <p>Charlas informativas y asesoría personalizada para tu éxito.</p>
              </div>
@@ -285,8 +307,8 @@
       <div class="rector__box">
         <div class="rector__video">
           <video controls playsinline
-                 poster="../src/Assets/img/pedro img.png">
-            <source src="../src/Assets/videos/Dr. Pedro Arieta _ Mensaje Ciclo 02 - 2025 - Universidad de Oriente (1080p, h264).mp4" type="video/mp4">
+                 poster="assets/images/pedro img.png">
+            <source src="assets/videos/Dr. Pedro Arieta _ Mensaje Ciclo 02 - 2025 - Universidad de Oriente (1080p, h264).mp4" type="video/mp4">
             Tu navegador no soporta el elemento video.
           </video>
         </div>
@@ -303,19 +325,19 @@
          <div class="associations-logos">
              <div class="association-item">
                  <div class="association-logo">
-                    <img src="../src/Assets/img/auprides.png" alt="Auprides">
+                    <img src="assets/images/auprides.png" alt="Auprides">
                  </div>
              </div>
              
              <div class="association-item">
                  <div class="association-logo">
-                    <img src="../src/Assets/img/Auprica.png" alt="Auprica">
+                    <img src="assets/images/Auprica.png" alt="Auprica">
                  </div>
              </div>
              
              <div class="association-item">
                  <div class="association-logo">
-                    <img src="../src/Assets/img/Ciesce.png" alt="Ciesce">
+                    <img src="assets/images/Ciesce.png" alt="Ciesce">
                  </div>
              </div>
          </div>
@@ -333,7 +355,7 @@
         <!-- Grande izquierda -->
         <a href="#" class="news-card news-card--lg">
           <figure class="news-card__media">
-            <img src="../src/Assets/img/acontecer univo 1.png" alt="Presentación de libro" loading="lazy">
+            <img src="assets/images/acontecer univo 1.png" alt="Presentación de libro" width="600" height="400" loading="lazy">
           </figure>
           <div class="news-card__overlay">
             <h3 class="news-card__title">
@@ -346,7 +368,7 @@
         <!-- Derecha arriba -->
         <a href="#" class="news-card">
           <figure class="news-card__media">
-            <img src="../src/Assets/img/acontecer univo 2.png" alt="Conferencia de prensa" loading="lazy">
+            <img src="assets/images/acontecer univo 2.png" alt="Conferencia de prensa" width="400" height="300" loading="lazy">
           </figure>
           <div class="news-card__overlay">
             <h3 class="news-card__title">
@@ -359,7 +381,7 @@
         <!-- Derecha abajo -->
         <a href="#" class="news-card">
           <figure class="news-card__media">
-            <img src="../src/Assets/img/acontecer univo 3.png" alt="II Congreso UNIVO" loading="lazy">
+            <img src="assets/images/acontecer univo 3.png" alt="II Congreso UNIVO" width="400" height="300" loading="lazy">
           </figure>
           <div class="news-card__overlay">
             <h3 class="news-card__title">
@@ -371,17 +393,18 @@
       </div>
 
       <div class="news__cta">
-        <button type="button" class="btn btn--pill" id="news-more">Ver más publicaciones</button>
+        <a href="#" class="btn btn--pill">Ver más publicaciones</a>
       </div>
     </div>
   </section>
+    </main>
       
   <!-- Footer -->
   <footer class="footer">
     <div class="footer-content">
       <div class="footer-section">
         <div class="footer-logo">
-          <img src="../src/Assets/img/univo-no-transparent.png" alt="UNIVO" class="univo-logo">
+          <img src="assets/images/univo-no-transparent.png" alt="UNIVO" class="univo-logo">
         </div>
       </div>
       
@@ -404,7 +427,7 @@
       <div class="footer-section-cda">
         <div class="accreditation">
           <div class="cda-logo">
-            <img src="../src/Assets/img/cda.webp" alt="CDA" class="cda-logo">
+            <img src="assets/images/cda.webp" alt="CDA" class="cda-logo">
           </div>
         </div>
         
@@ -438,6 +461,21 @@
       </div>
     </div>
   </footer>
-    <script src="../src/Scripts/main.js"></script>
+
+    <!-- Botón flotante de WhatsApp -->
+    <a href="https://api.whatsapp.com/send/?phone=50378616984&text=Hola+%2AUNIVO%2A.+Necesito+m%C3%A1s+informaci%C3%B3n+sobre+UNIVO+https%3A%2F%2Fwww.univo.edu.sv%2F&type=phone_number&app_absent=0" 
+       class="whatsapp-float" 
+       target="_blank" 
+       rel="noopener"
+       aria-label="Contactar por WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Botón de scroll to top -->
+    <button id="scrollToTop" class="scroll-to-top" aria-label="Volver arriba">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="assets/js/main.js"></script>
 </body>
 </html>
